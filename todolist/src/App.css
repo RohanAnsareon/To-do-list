@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #afaba2;  
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background-color: #c3c3c1;
+  width: 25%;
+  min-width: 450px;
+  height: 600px;
+  padding: 35px;
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(83, 83, 83, 0.4);
+}
+.header h1{
+  color: #806f5d;
+  font-weight: 50px;
+  text-align: center;
+  margin: 20px 20px 30px 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.main-content{
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.task-list{
+    width: 90%;
+    margin: auto;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.task-input {
+  font-size: 15px;
+  color: rgb(105, 101, 101);
+  background-color: #c2b1b1;
+  border: 1px solid rgb(206, 205, 205);
+  outline: none;
+  border-radius: 20px;
+  width: 350px;
+  min-width: 250px;
+  padding: 15px 10px 10px 20px;
+  margin-right: 10px;
+  font-family: 'Josefin Sans', serif;
+}
+.buttons{
+  display: flex;
+}
+.btn{
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+  background-color: #943a67;
+  color: #ccc;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  width: 100px;
+  height: 35px;
+}
+.no-task{
+    color: #806f5d;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.list-item span {
+  color: rgb(146, 110, 110);
+  font-family: 'Noto Sans', sans-serif;
+  
+}
+.delete-btn{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.delete-btn i{
+  font-size: 16px;
+  color: #bbb;
+  margin-right: 20px;
+  color: rgb(179, 110, 110);
+}
