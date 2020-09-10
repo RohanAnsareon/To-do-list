@@ -10,7 +10,7 @@ const Task = ({task}) => {
             <div>
                 <button  
                     className='delete-btn'
-                    onClick={()=>removeTask(task.id)}>
+                    onClick={(value)=>removeTask(value.id)}>
                     <i className="fas fa-trash-alt"></i>
                 </button>
             </div>

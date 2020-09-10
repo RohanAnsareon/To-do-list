@@ -4,15 +4,19 @@ import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import Task from './Task'
 
-const SortableItem = SortableElement(({value}) => <Task task={value} key={value.id}/>);
+const SortableItem = SortableElement(({value}) => < Task task={value} key={value.id}/>);
 
 const SortableList = SortableContainer(({items}) => {
   return (
-    <ul>
+    <div className="task-list">
+    {items.length ? 
+    (<ul >
       {items.map((value, index) => (
         <SortableItem key={value.id} index={index} value={value} />
       ))}
-    </ul>
+    </ul>):
+    (<div className='no-task'>There is not any task.</div>)}
+    </div>
   );
 });
 
