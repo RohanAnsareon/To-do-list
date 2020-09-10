@@ -16,6 +16,7 @@ const TaskListContextProvider = (props) => {
     setTasks([...tasks, {name, id: uuid()}]);
  };
  const removeTask = (id) => {
+     console.log(id)
      setTasks(tasks.filter(task => task.id !== id));
  };
 

@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import { TaskListContext } from '../context/TaskListContext';
-import {SortableContainer, SortableElement, arrayMove} from 'react-sortable-hoc';
+import {SortableContainer, SortableElement} from 'react-sortable-hoc';
+import arrayMove from 'array-move';
 import Task from './Task'
 
 const SortableItem = SortableElement(({value}) => <Task task={value} key={value.id}/>);
@@ -9,7 +10,7 @@ const SortableList = SortableContainer(({items}) => {
   return (
     <ul>
       {items.map((value, index) => (
-        <SortableItem key={index} index={index} value={value} />
+        <SortableItem key={value.id} index={index} value={value} />
       ))}
     </ul>
   );
